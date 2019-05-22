@@ -1,0 +1,34 @@
+<!-- 课程列表 -->
+<scroll-view scroll-y="true" style="height:{{scrollYHeight}}px" bindscrolltoupper="topLoad" bindscrolltolower="bindDownLoad">
+  <view class='item-background'>
+    <block wx:for="{{list}}" wx:key="{{item.id}}">
+      <view class="scroll-view-item" data-course-detail='{{item}}' catchtap='courseDetail'>
+        <text class="item-title">{{item.name}}</text>
+        <view class="item-dates">
+          <image class="item-image" src="../../images/countCourse.png"></image>
+          <view class="item-date">课时数量:{{item.periodCount}}课时</view>
+        </view>
+        <view class="item-locations">
+          <image class="item-image" src="../../images/phone.png"></image>
+          <view class="item-location">联系电话{{item.telephone}}</view>
+        </view>
+        <view class="item-during">
+          <text class="item-during-date">课程编码：{{item.code}}</text>
+        </view>
+
+        <!-- 分割线 -->
+        <view class="divLine"></view>
+        <view class='teacher-price'>
+          <view class='teacher'>
+          </view>
+          <text class='price'>￥{{item.money}}</text>
+        </view>
+      </view>
+    </block>
+
+    <view class="bottom-text" hidden="{{!isCollectCourseDown}}">
+      <text>到底了</text>
+    </view>
+
+  </view>
+</scroll-view>

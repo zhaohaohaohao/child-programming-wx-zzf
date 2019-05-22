@@ -1,0 +1,4 @@
+<!--pages/share/share.wxml-->
+<view class='main' style='height:{{height}}rpx'>
+    <image src='/images/icon.jpg'></image>
+</view>

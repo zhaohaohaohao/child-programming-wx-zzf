@@ -1,0 +1,46 @@
+<!--pages/persion/persion.wxml-->
+<view class="header main">
+  <image class="avatar" src="{{student.photoUrl}}"></image>
+  <view class='right-view'>
+    <view class='row'>
+      <view class="userText">学生姓名：{{student.name}}</view>
+    </view>
+    <view class='row'>
+      <view class="userText">家长：{{student.guardianName}}</view>
+    </view>
+  </view>
+  <view class='to-edit-user-click' catchtap='editStudent'><image class='to-edit-user' src='../../images/right-ioc.png'></image></view>
+</view>
+
+<view class="main">
+  <view class='lineView'>
+    <view wx:for="{{textArr}}" class='orderView' bindtap="toDoList" data-index='{{index}}' wx:key="{{index}}">
+      <image src='{{imageArr[index]}}' class='image' mode='aspectFit'></image>
+      <text class='text'>{{item}}</text>
+    </view>
+  </view>
+</view>
+
+<view class="content" bindtap="toCourseSchedule">
+  <image src="/images/click.png" class="sm-img"></image>
+  <text>课程表</text>
+  <image src="/images/right-ioc.png" class="sm-img pull-right"></image>
+</view>
+<view class="content" bindtap="toShowWork">
+ <image src="/images/click.png" class="sm-img"></image>
+  <text>课堂反馈</text>
+  <image src="/images/right-ioc.png" class="sm-img pull-right"></image>
+</view>
+<view class="content" bindtap="toShare">
+  <image src="/images/click.png" class="sm-img"></image>
+  <text>分享小程序</text>
+  <image src="/images/right-ioc.png" class="sm-img pull-right"></image>
+</view>
+<view class="content" bindtap="toSuggesstion">
+  <image src="/images/click.png" class="sm-img"></image>
+  <text>意见反馈</text>
+  <image src="/images/right-ioc.png" class="sm-img pull-right"></image>
+</view>
+<!-- <view class='back-bac' bindtap="toSeting">
+  <text>退出</text>
+</view> -->

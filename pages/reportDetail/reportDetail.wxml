@@ -1,0 +1,17 @@
+<wxs module="tutil" src="../../utils/date.wxs"></wxs>
+<view wx:for="{{report}}" wx:key="id" class="bg-border">
+        <text class="item-status">{{tutil.formatYYYYMMMDD(item.createTime)}}</text>
+        <view class="item-bd">
+           <view class="view-row">
+            <view>动手能力:{{item.handAbility}}</view>
+            <view>专注程度:{{item.focusOn}}</view>
+            <view>知识掌握:{{item.knowledge}}</view>
+           </view> 
+           <view>评语：</view> 
+          <view class="item-comment">
+            <view class="item-comment-bd">
+              <text>{{item.evaluateText}}</text>
+            </view>
+          </view>
+        </view>
+      </view>

@@ -1,0 +1,56 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <input name="openid" hidden value='{{openid}}'/>
+  <!-- <input name="id" hidden value='{{id}}'/> -->
+  <view class="section">
+    <view class="section__title">监护人姓名:</view>
+    <input name="guardianName" placeholder="监护人姓名" value='{{student.guardianName}}'/>
+  </view>
+  <view class="section">
+    <view class="section__title">监护人电话:</view>
+    <input name="guardianPhone" placeholder="监护人电话(账号)" value='{{student.guardianPhone}}'/>
+  </view>
+  <view class="section">
+    <view class="section__title">登录密码:</view>
+    <input type='password' name="password" placeholder="前端登录密码" value='{{student.password}}'/>
+  </view>
+  <view class="section">
+    <view class="section__title">学生姓名:</view>
+    <input name="name" placeholder="学生姓名" value='{{student.name}}'/>
+  </view>
+   <view class="section">
+    <view class="section__title">学生年龄:</view>
+    <input name="age" placeholder="学生年龄" value='{{student.age}}'/>
+  </view>
+  <view class="section">
+    <view class="section__title_es">学生性别:</view>
+    <radio-group name="sex">
+      <label>
+        <radio value="0" checked="{{isBoy}}"/>男</label>
+      <label>
+        <radio value="1" checked="{{isGril}}"/>女</label>
+    </radio-group>
+   </view>
+   <view class="section">
+    <view class="section__title">家庭住址:</view>
+    <input name="address" placeholder="家庭住址" value='{{student.address}}'/>
+  </view>
+  <view class="section">
+    <view class="section__title">邮箱:</view>
+    <input name="email" placeholder="邮箱" value='{{student.email}}'/>
+  </view>
+  <view class="section">
+    <view class="section__title_es">头像:</view>
+    <image hidden='{{imageFlg}}' class='upimg' bindtap="upimg" src='/images/up_img.png'></image>  
+  </view>
+  <view class='student_photo'>
+    <block wx:for="{{img_arr}}" wx:key="{{img_arr}}">  
+      <image class='stu_photo' src='{{item}}'></image>  
+      <text class='delete_img'bindtap="deleteimg" >删除</text>
+    </block>
+  </view>
+ 
+  <view class="btn-area">
+    <button formType="submit">提交</button>
+    <button formType="reset">重置</button>
+  </view>
+</form>

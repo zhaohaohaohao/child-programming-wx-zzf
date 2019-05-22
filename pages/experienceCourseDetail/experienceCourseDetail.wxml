@@ -1,0 +1,91 @@
+<wxs module="tutil" src="../../utils/date.wxs"></wxs>
+
+<view class='sharePic' hidden='{{sharePicFlg}}' catchtap='returnPage'>
+  <canvas canvas-id="shareCanvas" style="width:300px;height:380px"></canvas>
+  <!-- <canvas canvas-id="shareCanvas"></canvas> -->
+</view>
+
+
+<!-- <modal hidden="{{hiddenmodalput}}" title="请输入信息" confirm-text="提交" bindconfirm="confirm" bindcancel="modalDel">
+    手机号：<input type='text'placeholder="请填写手机号(必填)" auto-focus bindinput ="phoneInput"/>
+    分享码：<input type='text'placeholder="有则填，无则不用填" auto-focus bindinput ="shareCodeInput"/>
+</modal> -->
+
+<view class='page' hidden='{{!sharePicFlg}}'>
+  <text class="title">{{experienceCourseDetail.title}}</text>
+  <view class="dates">
+    <image class="image" src="../../images/phone.png"></image>
+    <view class="date">联系电话：{{experienceCourseDetail.telephone}}</view>
+  </view>
+  <view class="dates">
+    <image class="image" src="../../images/location.png"></image>
+    <view class="date">地点：{{experienceCourseDetail.address}}</view>
+  </view>
+  <view class="dates">
+    <image class="image" src="../../images/time.png"></image>
+    <view class="date">报名结束时间：{{tutil.formatYYYYMMMDD(experienceCourseDetail.signUpEndDate)}}</view>
+  </view>
+  <view class='teacher-price'>
+    <view class='teacher'>
+      <image class="image" src="../../images/number.png"></image>
+      <view class="dates">优惠:分享越多越优惠</view>
+    </view>
+    <text class='price'>￥{{experienceCourseDetail.money}}</text>
+  </view>
+
+  <!-- 分割线 -->
+  <view class="divLine"></view>
+
+  <!-- 课程简介 -->
+  <view class="bg-img">
+    <text class="introduction">课程简介</text>
+  </view>
+  <view class='course-content-style'>
+    <view class='course-content'>{{experienceCourseDetail.introduction}}</view>
+  </view>
+
+  <!-- 课程介绍图片 -->
+  <view class="bg-img">
+    <text class="introduction">宣传照片</text>
+  </view>
+  <image class='course-introduction-img' src='{{experienceCourseDetail.photoUrl}}' bindtap="previewImage"></image>
+
+<view class="bg-img">
+  <text class="introduction">报名</text>
+</view>
+<view class='course-content-style'>
+  手机号：
+  <input type='text' placeholder="请填写手机号(必填)" auto-focus bindinput="phoneInput" /> 分享码：
+  <input type='text' placeholder="有则填，无则不用填" bindinput="shareCodeInput" />
+</view>
+
+<view class='view-row'>
+ <button class='btn1'  bindtap='downloadImg'>
+    <image class='btnImg' src='/images/share.png'></image>
+    <view>分享</view>
+ </button>
+
+  <button class='btn2' catchtap='signUpExperienceCourse'>
+    <image class='btnImg' src='../../images/enroll.png'></image>
+    <view>报名</view>
+ </button>
+
+</view>
+
+</view>
+
+
+<!-- <view class='emty-view'></view>
+<view class='bottom-view'>
+  <view></view>
+    <view class='bottom-button'>
+    <button class='share' id="shareBtn" bindtap='downloadImg'>
+      <image src='/images/share.png'></image>
+    </button>
+  </view>
+  <view></view>
+  <view class='bottom-button'>
+    <image class='bottom-button-img' src='../../images/enroll.png' catchtap='signUpExperienceCourse'></image>
+  </view>
+  <view></view>
+</view> -->

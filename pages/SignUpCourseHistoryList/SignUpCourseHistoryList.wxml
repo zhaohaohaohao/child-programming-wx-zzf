@@ -1,0 +1,46 @@
+<!-- 课程列表 -->
+<wxs module="tutil" src="../../utils/date.wxs"></wxs>
+
+<scroll-view scroll-y="true" style="height:{{scrollYHeight}}px" bindscrolltoupper="topLoad" bindscrolltolower="bindDownLoad">
+  <view class='item-background'>
+    <block wx:for="{{list}}" wx:key="{{item.id}}">
+      <view class="scroll-view-item" data-grade-id='{{item.classId}}' data-course-id='{{item.courseId}}' catchtap='courseDetail'>
+        <text class="item-title">{{item.courseName}}</text>
+        <view class="item-dates">
+          <image class="item-image" src="../../images/teacher.png"></image>
+          <view class="item-date">班级名称:{{item.gradeName}}</view>
+        </view>
+        <view class="item-locations">
+          <image class="item-image" src="../../images/time.png"></image>
+          <view class="item-location">报名时间:{{tutil.formatYYYYMMMDD(item.signUpTime)}}</view>
+        </view>
+        <view class="item-locations">
+          <image class="item-image" src="../../images/time.png"></image>
+          <view class="item-location">课程结束时间:{{tutil.formatYYYYMMMDD(item.endTime)}}</view>
+        </view>
+        <view class="item-during">
+          <text class="item-during-date" wx:if="{{item.isPayment==0}}">是否缴费：否</text>
+          <text class="item-during-date" wx:if="{{item.isPayment==1}}">是否缴费：是</text>
+        </view>
+
+        <!-- 分割线 -->
+        <view class="divLine"></view>
+        <view class='teacher-price'>
+          <view class='teacher'>
+            <image class="item-teacher-image" src="{{item.photoUrl}}"></image>
+            <view class="item-teacherName">{{item.teacherName}}</view>
+          </view>
+          <text class='price'>￥{{item.money}}</text>
+        </view>
+      </view>
+    </block>
+
+    <view class="bottom-text" hidden="{{!isSignUpCourseHistoryDown}}">
+      <text>到底了</text>
+    </view>
+
+  </view>
+</scroll-view>
+<loading hidden="{{hidden}}">
+  加载中...
+</loading>

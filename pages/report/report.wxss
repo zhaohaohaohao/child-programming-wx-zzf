@@ -1,0 +1,24 @@
+.item-background {
+  background-color: #f2f3f5;
+  padding: 5rpx;
+}
+
+.scroll-view-item {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: #fff;
+  padding: 13rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  border-radius: 10rpx;
+  height: 60rpx;
+}
+
+.item-title {
+  font-size: 38rpx;
+  font-weight: bold;
+  line-height: 60rpx;
+  color: #222;
+  width: 100%;
+}

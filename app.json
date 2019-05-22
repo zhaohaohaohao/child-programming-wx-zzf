@@ -1,0 +1,40 @@
+{
+  "pages":[
+    
+    "pages/index/index",
+    "pages/Calendar/Calendar",
+    "pages/collectCourseList/collectCourseList",
+    "pages/persion/persion",
+    "pages/SignUpCourseList/SignUpCourseList",
+    "pages/SignUpCourseHistoryList/SignUpCourseHistoryList",
+    "pages/SignUpCourseClassList/SignUpCourseClassList",
+    "pages/experienceCourse/experienceCourse",
+    "pages/experienceCourseDetail/experienceCourseDetail",
+    "pages/showWork/showWork",
+    "pages/addPersion/addPersion",
+    "pages/course/course",
+    "pages/authorize/authorize",
+    "pages/SignUpCourseDetail/SignUpCourseDetail",
+    "pages/share/share",
+    "pages/suggesstion/suggesstion",
+    "pages/report/report",
+    "pages/reportDetail/reportDetail",
+    "pages/CourseListDetail/CourseListDetail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "儿童编程",
+    "navigationBarTextStyle":"black"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "plugins": {
+    "calendar": {
+      "version": "1.1.3",
+      "provider": "wx92c68dae5a8bb046"
+    }
+  }
+}

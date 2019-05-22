@@ -1,0 +1,70 @@
+<view class='page'>
+  <view>
+    <text class="title">{{course.name}}</text>
+    <view class="dates">
+      <image class="image" src="../../images/countCourse.png"></image>
+      <view class="date">课时数量：{{course.periodCount}}节</view>
+    </view>
+    <view class="dates">
+      <image class="image" src="../../images/phone.png"></image>
+      <view class="date">联系电话：{{course.telephone}}</view>
+    </view>
+    <view class="dates">
+      <image class="image" src="../../images/number.png"></image>
+      <view class="date">课程编码：{{course.code}}</view>
+    </view>
+
+    <view class="dates">
+      <image class="image" src="../../images/price.png"></image>
+      <view class="price">￥{{course.money}}元</view>
+    </view>
+  </view>
+  <!-- 分割线 -->
+  <view class="divLine"></view>
+
+  <!-- 课程安排 -->
+  <view class="bg-img">
+    <text class="introduction">课程安排</text>
+  </view>
+  <view class=''>
+      <view class="table">
+        <view class="tr">
+            <view class="th">班级</view>
+            <view class="td">{{courseOrginDetail.gradeName}}</view>
+       </view>
+        <view class="tr">
+            <view class="th">地点</view>
+            <view class="td">{{courseOrginDetail.gradeAddress}}</view>
+       </view>
+        <view class="tr">
+            <view class="th">老师</view>
+            <view class="td">{{courseOrginDetail.teacherName}}</view>
+       </view>
+        <view class="tr">
+            <view class="th">容量</view>
+            <view class="td">{{courseOrginDetail.capacity}}</view>
+       </view>
+        <view class="tr">
+            <view class="th">当前课时</view>
+            <view class="td">{{courseOrginDetail.currentPeriod}}</view>
+       </view>
+        <view class="tr">
+            <view class="th">课程时间</view>
+            <view class="td">{{courseOrginDetail.druingDate}}</view>
+       </view>
+        <view class="tr">
+            <view class="th">上课时间</view>
+            <view class="td">{{courseOrginDetail.weekendsSchedule}}</view>
+       </view>
+      </view>
+  </view>
+
+  <!-- 课程简介 -->
+  <view class="bg-img">
+    <text class="introduction">课程简介</text>
+  </view>
+  <view class='course-content-style'>
+    <view class='course-content'>{{course.introduction}}</view>
+  </view>
+
+</view>

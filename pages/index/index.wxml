@@ -1,0 +1,129 @@
+<!--index.wxml-->
+<!-- <form bindsubmit="submit" report-submit='true'>
+  <button form-type="submit" type="default" size="mini">提交</button>
+</form> -->
+<view class="page">
+  <view class="click-page">
+    <view class="page-content">
+      <!-- 下拉框 -->
+      <view class='search-item'>
+        <view class='search-item-title'>校区:</view>
+        <view class='select_box'>
+          <view class='select' catchtap='selectTap'>
+            <text class='select_text'>{{schoolData[index].label}}</text>
+            <image class='select_img {{show&&"select_img_rotate"}}' src='/images/up.png'></image>
+          </view>
+          <view class='option_box' style='height:{{show?(schoolData.length>5?300:schoolData.length*60):0}}rpx;'>
+            <text class='option' style='{{index==schoolData.length-1&&"border:0;"}}' wx:for='{{schoolData}}' wx:key='this' data-index='{{index}}' data-schoolid='{{item.value}}' catchtap='optionTap'>{{item.label}}</text>
+          </view>
+        </view>
+      </view>
+
+      <view class='search-item'>
+        <view class='search-item-title'>讲师:</view>
+        <view class='select_box'>
+          <view class='select' catchtap='selectTap1'>
+            <text class='select_text'>{{teacherData[index1].label}}</text>
+            <image class='select_img {{show1&&"select_img_rotate"}}' src='/images/up.png'></image>
+          </view>
+          <view class='option_box' style='height:{{show1?(teacherData.length>5?300:teacherData.length*60):0}}rpx;'>
+            <text class='option' style='{{index==teacherData.length-1&&"border:0;"}}' wx:for='{{teacherData}}' wx:key='this' data-index1='{{index}}' data-teacherid='{{item.value}}' catchtap='optionTap1'>{{item.label}}</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="search-item">
+        <view class="search-item-title">价格：</view>
+        <input class='search-item-input-price' bindinput="lowPrice" placeholder="最低价格" value='' />至
+        <input class='search-item-input-price' bindinput="heighPrice" placeholder="最高价格" value='' />
+      </view>
+
+      <view class='search-item-time'>
+        <view class='search-item-time-title'>选择课程开始时间段:</view>
+        <!-- 时间段 -->
+        <view class="picker_group">
+          <picker mode="date" value="{{lowDate}}" bindchange="bindDateChange">
+            <view class="picker">
+              {{lowDate}}
+            </view>
+          </picker>
+          至
+          <picker mode="date" value="{{heighDate}}" bindchange="bindDateChange2">
+            <view class="picker">
+              {{heighDate}}
+            </view>
+          </picker>
+        </view>
+      </view>
+
+    </view>
+
+    <view bindtap='heighSearch' class='search-heigh-button'>搜索</view>
+
+  </view>
+
+
+  <view class="container page-top {{open ? 'c-state1' : ''}}">
+    <scroll-view scroll-y="true" style="height:{{scrollYHeight}}px" bindscrolltoupper="topLoad" bindscrolltolower="bindDownLoad">
+      <!-- bindscroll="scroll" scroll-top="{{scrollTop}}"-->
+
+      <view class="top-select">
+        <view><image class='welcome' src='../../images/welcome.jpg'></image></view>
+        <view class='top-right-view'>
+          <view catchtap='experienceCourse' class='experience-lesson'>体验课</view>
+          <image catchtap='authorization' class='myself' src='../../images/myself.png'></image>
+        </view>
+      </view>
+
+      <!-- 搜索栏 -->
+      <form bindsubmit="serachSubmit">
+        <view class="search-bar">
+          <input name="courseName" placeholder="搜索课程名称" value='{{courseName}}'></input>
+          <button formType="submit">搜索</button>
+          <image bindtap="tap_ch" class="screening" src='../../images/screening.png'></image>
+        </view>
+      </form>
+      <!-- 首页大图 -->
+      <image class='home-img' src='../../images/home-img.jpg'></image>
+      <!-- 课程列表 -->
+      <view class='item-background'>
+        <block wx:for="{{list}}" wx:key="{{item.id}}">
+          <view class="scroll-view-item" data-course-detail='{{item}}' catchtap='courseDetail'>
+            <text class="item-title">{{item.name}}</text>
+            <view class="item-dates">
+              <image class="item-image" src="../../images/countCourse.png"></image>
+              <view class="item-date">课时数量:{{item.periodCount}}课时</view>
+            </view>
+            <view class="item-locations">
+              <image class="item-image" src="../../images/phone.png"></image>
+              <view class="item-location">联系电话{{item.telephone}}</view>
+            </view>
+            <view class="item-during">
+              <text class="item-during-date">课程编码：{{item.code}}</text>
+              <text class="item-during-num" wx:if="{{index<3}}">速报</text>
+            </view>
+
+            <!-- 分割线 -->
+            <view class="divLine"></view>
+            <view class='teacher-price'>
+              <view class='teacher'>
+                <!-- <image class="item-teacher-image" src="../../images/teacher.png"></image>
+                <view class="item-teacherName">赵赞峰</view> -->
+              </view>
+              <text class='price'>￥{{item.money}}</text>
+            </view>
+          </view>
+        </block>
+
+        <view class="bottom-text" hidden="{{!isDown}}">
+          <text>到底了</text>
+        </view>
+
+      </view>
+    </scroll-view>
+    <loading hidden="{{hidden}}">
+      加载中...
+    </loading>
+
+  </view>
+</view>

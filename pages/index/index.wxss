@@ -1,0 +1,484 @@
+/**index.wxss**/
+
+/* 头 */
+
+.top-select {
+  height: 90rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 2rpx solid #ddd;
+  border-radius: 5rpx;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  border-top: none;
+}
+.top-right-view{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* 搜索 */
+
+.search-bar {
+  /* 横向布局 */
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+  border: 2rpx solid #ddd;
+  border-radius: 5rpx;
+  align-items: center;
+  justify-content: center；;
+  position: fixed;
+  top: 90rpx;
+  width: 100%;
+  background-color: #fff;
+  border-top: none;
+}
+
+.search-bar input {
+  font: inherit;
+  border-radius: 35rpx;
+  padding: 10rpx 20rpx;
+  background-color: #fafafa;
+  border: 1rpx solid #eee;
+  width: 460rpx;
+}
+
+.search-bar button {
+  font: inherit;
+  border-radius: 30rpx;
+  padding: 10rpx 20rpx;
+  background-color: #FFCC00;
+  border: 1rpx solid #eee;
+  width: 160rpx;
+  height: 75rpx;
+}
+
+.screening {
+  width: 75rpx;
+  height: 75rpx;
+  margin-right: 10rpx;
+}
+
+.myself {
+  width: 75rpx;
+  height: 75rpx;
+  margin-right: 7rpx;
+}
+
+.page-top {
+  height: 100%;
+  position: fixed;
+  width: 750rpx;
+  /* background-color: rgb(57, 125, 230); */
+  background-color: #fff;
+  z-index: 0;
+  transition: All 0.4s ease;
+  -webkit-transition: All 0.4s ease;
+}
+
+.c-state1 {
+  transform: rotate(0deg) scale(1) translate(-75%, 0%);
+  -webkit-transform: rotate(0deg) scale(1) translate(-75%, 0%);
+}
+
+.c-state2 {
+  transform: rotate(0deg) scale(0.8) translate(75%, 0%);
+  -webkit-transform: rotate(0deg) scale(0.8) translate(75%, 0%);
+}
+
+/* 首页大图 */
+
+.home-img {
+  margin-top: 185rpx;
+  margin-bottom: 0;
+  padding: 0;
+  border-radius: 35rpx;
+  width: 100%;
+  height: 250rpx;
+}
+
+/* 课程列表 */
+
+.item-background {
+  background-color: #f2f3f5;
+  padding: 5rpx;
+}
+
+.scroll-view-item {
+  background-color: #fff;
+  padding: 13rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  /* border: 1rpx solid black; */
+  border-radius: 35rpx;
+  height: 300rpx;
+}
+
+.item-title {
+  font-size: 38rpx;
+  font-weight: bold;
+  line-height: 36rpx;
+  color: #222;
+  width: 100%;
+}
+
+.item-dates {
+  font-size: 32rpx;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10rpx;
+  align-items: center;
+}
+
+.item-image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.item-date {
+  margin-left: 10rpx;
+}
+
+.item-locations {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rpx;
+  align-items: center;
+}
+
+.item-location {
+  font-size: 32rpx;
+  margin-left: 10rpx;
+}
+
+.item-during {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-during-date {
+  font-size: 30rpx;
+  color: #a1a4b5;
+  align-items: center;
+}
+
+.item-during-num {
+  font-size: 30rpx;
+  color: hotpink;
+}
+
+/* 横着的分割View样式 */
+
+/*分割线样式*/
+
+.divLine {
+  margin-top: 10rpx;
+  margin-right: 10rpx;
+  background: #eaebed;
+  width: 100%;
+  height: 2rpx;
+}
+
+.teacher-price {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10rpx;
+  justify-content: space-between;
+}
+
+.teacher {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-teacher-image {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.item-teacherName {
+  margin-left: 7rpx;
+}
+
+.price {
+  color: red;
+  font-weight: bold;
+}
+
+/* 筛选切换 */
+
+.click-page {
+  height: 100%;
+  width: 750rpx;
+  position: fixed;
+  z-index: 0;
+  margin-left: 25%;
+}
+
+/* 高级搜索 */
+
+.page-content {
+  padding-top: 80rpx;
+}
+
+.search-item {
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+  height: 90rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid gainsboro;
+  margin-top: 20rpx;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-item-title {
+  line-height: 86rpx;
+  width: 20%;
+  text-align: center;
+  /* border: 1rpx solid black; */
+}
+
+.select_box {
+  /* background: #fff; */
+  width: 78%;
+  margin: 0 auto;
+  /* margin-top: 40rpx; */
+  height: 86rpx;
+  line-height: 86rpx;
+  text-align: left;
+  position: relative;
+  /* border: 1rpx solid black; */
+}
+
+.select {
+  box-sizing: border-box;
+  width: 100%;
+  height: 86rpx;
+  border: 1px solid #efefef;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+}
+
+.select_text {
+  font-size: 28rpx;
+  flex: 1;
+  color: rgb(102, 102, 102);
+  line-height: 86rpx;
+  height: 86rpx;
+}
+
+.select_img {
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.select_img_rotate {
+  transform: rotate(180deg);
+}
+
+.option_box {
+  position: absolute;
+  top: 86rpx;
+  width: 100%;
+  border: 1px solid #efefef;
+  box-sizing: border-box;
+  height: 0;
+  overflow-y: auto;
+  border-top: 0;
+  /* background: #fff; */
+  background-color: gainsboro;
+  transition: height 0.3s;
+  z-index: 2;
+}
+
+.option {
+  display: block;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  border-bottom: 1px solid #efefef;
+  padding: 10rpx;
+  color: rgb(102, 102, 102);
+}
+
+/* 课程时间段 */
+
+.search-item-time {
+  width: 75%;
+  height: 150rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid gainsboro;
+  margin-top: 20rpx;
+}
+
+.search-item-time-title {
+  width: 100%;
+  /* border: 1rpx solid black; */
+}
+
+/* 日期选择 */
+
+.picker_group {
+  height: 85rpx;
+  line-height: 85rpx;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  color: #888;
+  border-bottom: 1rpx solid #efefef;
+}
+
+.picker_group picker {
+  /* background-color: yellow; */
+  width: 165rpx;
+  color: #64bff1;
+  height: 55rpx;
+  line-height: 55rpx;
+  margin: 0 2%;
+  padding: 0 2%;
+  border: 1rpx solid #64bff1;
+  border-radius: 30rpx;
+}
+
+.search-item-input {
+  border: 1rpx solid gainsboro;
+  width: 78%;
+  border-radius: 10rpx;
+}
+.search-item-input-price{
+  border: 1rpx solid gainsboro;
+  width: 35%;
+  border-radius: 10rpx;
+}
+
+.search-heigh-button {
+  font: inherit;
+  border-radius: 30rpx;
+  padding: 10rpx 20rpx;
+  background-color: gainsboro;
+  border: 1rpx solid #eee;
+  width: 45%;
+  height: 85rpx;
+  margin-top: 15%;
+  margin-left: 15%;
+  line-height: 85rpx;
+  text-align: center;
+  letter-spacing: 30rpx;
+  font-weight: bold;
+}
+
+/* .search-item{
+  display: flex;
+  flex-direction: row;
+  height: 80rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid black;
+  margin-top: 10rpx;
+}
+.search-item-title{
+  line-height: 80rpx;
+  width: 20%;
+  text-align: center;
+
+}
+
+.choice-bar {
+  top: 5;
+  width: 50%;
+  font-size: 16px;
+  z-index: 9;
+}
+.chioce-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20rpx;
+  height: 80rpx;
+  color: #187ceb;
+  font-weight: bold;
+}
+.icon-chioce {
+  margin-left: 20rpx;
+  height: 40rpx;
+  width: 40rpx;
+}
+.sorting-list1 {
+  margin-top: 10rpx;
+  position: absolute;
+  top: 80rpx;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: -1;
+  font-size: 14px;
+  border-bottom: 1rpx solid #ddd;
+}
+.sorting-list2 {
+  margin-top: 350rpx;
+  position: absolute;
+  top: 80rpx;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: -1;
+  font-size: 14px;
+  border-bottom: 1rpx solid #ddd;
+}
+.chioce-list-hide {
+  display: none !important;
+}
+.chioce-list-show {
+  top: 80rpx;
+  animation: slide 500ms;
+}
+.sorting-item {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 40rpx;
+  border-bottom: 1rpx solid #ddd;
+}*/
+
+.experience-lesson {
+  border-radius: 30rpx;
+  padding: 10rpx 20rpx;
+  background-color: #FFCC00;
+  border: 1rpx solid #eee;
+  width: 115rpx;
+  align-content: center;
+  justify-content: center;
+  margin-right: 5rpx;
+}
+
+.bottom-text {
+  width: 100%;
+  background-color: white;
+  justify-content: center;
+  display: flex;
+  height: 70rpx;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+}
+.welcome{
+  width:500rpx;
+  height:90rpx;
+  border-radius: 35rpx;
+}

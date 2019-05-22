@@ -1,0 +1,7 @@
+/* pages/share/share.wxss */
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  width: 100%;
+}

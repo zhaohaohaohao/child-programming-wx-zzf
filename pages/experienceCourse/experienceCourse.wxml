@@ -1,0 +1,38 @@
+<wxs module="tutil" src="../../utils/date.wxs"></wxs>
+
+<view class='item-background'>
+  <block wx:for="{{experienceCourses}}" wx:key="{{item.id}}">
+    <view class="scroll-view-item" data-experience-course-detail='{{item}}' catchtap='experienceCourseDetail'>
+      <text class="item-title">{{item.title}}</text>
+      <view class="item-locations">
+        <image class="item-image" src="../../images/phone.png"></image>
+        <view class="item-location">联系电话:{{item.telephone}}</view>
+      </view>
+      <view class="item-dates">
+        <image class="item-image" src="../../images/location.png"></image>
+        <view class="item-date">地点:{{item.address}}</view>
+      </view>
+      <view class="item-dates">
+        <image class="item-image" src="../../images/time.png"></image>
+        <view class="item-date">报名截止时间:{{tutil.formatYYYYMMMDD(item.signUpEndDate)}}</view>
+      </view>
+
+      <view class="item-during">
+        <view class="item-dates">
+        <image class="item-image" src="../../images/number.png"></image>
+        <view class="item-date">优惠:分享越多越优惠</view>
+      </view>
+        <text class="item-during-num">分享有优惠</text>
+      </view>
+      <!-- 分割线 -->
+      <view class="divLine"></view>
+      <view class='teacher-price'>
+        <view class='teacher'>
+          
+        </view>
+        <text class='price'>￥{{item.money}}</text>
+      </view>
+    </view>
+  </block>
+
+</view>

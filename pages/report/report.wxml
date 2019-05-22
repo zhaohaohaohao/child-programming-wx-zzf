@@ -1,0 +1,10 @@
+<wxs module="tutil" src="../../utils/date.wxs"></wxs>
+
+<view class='item-background'>
+  <block wx:for="{{grades}}" wx:key="{{item.gradeId}}">
+    <view class="scroll-view-item" data-grade-id='{{item.gradeId}}' catchtap='reportList'>
+      <text class="item-title">{{item.name}}</text>
+      <view>></view>
+      </view>
+  </block>
+</view>
